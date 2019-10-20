@@ -99,7 +99,7 @@ class DataMapper implements DataMapperInterface{
         $this->property_names[] = $name;
 
         $field = $this->builder
-            ->add($name, $type)
+            ->add($name, $type, $options)
             ->get($name);
 
         if(!$field->getType()->getInnerType() instanceof TranslatableFieldInterface)
